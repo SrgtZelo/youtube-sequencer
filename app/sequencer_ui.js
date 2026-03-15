@@ -1,3 +1,11 @@
+if (window.trustedTypes && window.trustedTypes.createPolicy) {
+  window.trustedTypes.createPolicy('default', {
+    createHTML: string => string,
+    createScriptURL: string => string,
+    createScript: string => string,
+  });
+}
+
 const LENGTH_OPTIONS = [
     '1/16t',
     '1/16',
